@@ -1,22 +1,32 @@
-# XSROSDA (Submitted to IEEE TPAMI)
-Implementation for the ''Interpretable Novel Target Discovery Through Open-Set Domain Adaptation (**XSR-OSDA**)'' work (*under review*). 
+# XSR-OSDA
+Implementation for the ''Interpretable Novel Target Discovery Through Open-Set Domain Adaptation (**XSR-OSDA**)'' work (*under review*).
 
-XSR-OSDA is an extension of the **SR-OSDA** published in ICCV 2021 [[paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Jing_Towards_Novel_Target_Discovery_Through_Open-Set_Domain_Adaptation_ICCV_2021_paper.pdf)][[Github](https://github.com/scottjingtt/SROSDA/tree/main)].
+XSR-OSDA is an extension work of the **SR-OSDA** published in ICCV 2021 [[paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Jing_Towards_Novel_Target_Discovery_Through_Open-Set_Domain_Adaptation_ICCV_2021_paper.pdf)][[Github](https://github.com/scottjingtt/SROSDA/tree/main)].
 
 ## Data
 ---
-- [I->AwA](./data/I2AwA/dataset_info.txt)
-- [DomainNet -> AwA](./data/D2AwA/classes.txt)
-- [DomainNet -> LAD](./data/D2LAD/classes.txt)
+- [I->AwA](./data/I2AwA/dataset_info.txt): source 40 classes, target 50 classes
+- [DomainNet -> AwA](./data/D2AwA/classes.txt): source: 10 classes, target: 17 classes
+- [DomainNet -> LAD](./data/D2LAD/classes.txt): source 40 classes, target 56 classes
+
+|Dataset|Domain|Role|#Images|#Attributes|#Classes|
+|-|-|-|-|-|-|
+|DomainNet $\rightarrow$ AwA2|AwA <br> Paint <br> Real|S/T|9,343/15,306 <br> 3,441/5,760 <br> 5,251/10,047|85|10/17|
+|I $\rightarrow$ AwA         |I / AwA | S/T | 2,970 / 37,322 | 85 | 40/50 |
+|Domain $\rightarrow$ LAD| LAD <br> Paint <br> Real | S/T | 13,322/19,744 <br> 11,714/15,311 <br> 22,395/31,066 | 253 | 40/56 |
+
 
 ## Dependencies
 ---
-- Python 3.6
-- Pytorch 1.1
+- Python 3.8
+- Pytorch 1.10
 
 
 ## Training
 ---
+```shell
+python main.py
+```
 
 ## Evaluation
 ---
