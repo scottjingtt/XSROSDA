@@ -3,11 +3,14 @@
 
 *XSR-OSDA is an extension work of the **SR-OSDA** published in ICCV 2021 [[paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Jing_Towards_Novel_Target_Discovery_Through_Open-Set_Domain_Adaptation_ICCV_2021_paper.pdf)][[Github](https://github.com/scottjingtt/SROSDA/tree/main)].*
 
-## Data
+
+![image](./framework.jpg)
+
+## Data Preparation
 ---
-- [I->AwA](./data/I2AwA/dataset_info.txt): source 40 classes, target 50 classes
-- [DomainNet -> AwA](./data/D2AwA/classes.txt): source: 10 classes, target: 17 classes
-- [DomainNet -> LAD](./data/D2LAD/classes.txt): source 40 classes, target 56 classes
+- [I->AwA](./data/I2AwA/dataset_info.txt): 3D2 and AwA2
+- [DomainNet -> AwA](./data/D2AwA/classes.txt): DomainNet & AwA2
+- [DomainNet -> LAD](./data/D2LAD/classes.txt): DomainNet & LAD
 
 |Dataset|Domain|Role|#Images|#Attributes|#Classes|
 |:-:|:-:|:-:|:-:|:-:|:-:|
