@@ -1,5 +1,7 @@
 # XSROSDA (Submitted to IEEE TPAMI)
-Implementation for the ''Interpretable SR-OSDA'' work, which is submitted to IEEE TPAMI. XSROSDA is an extension of the SR-OSDA published in ICCV 2021.
+Implementation for the ''Interpretable Novel Target Discovery Through Open-Set Domain Adaptation (**XSR-OSDA**)'' work (*under review*). 
+
+XSR-OSDA is an extension of the **SR-OSDA** published in ICCV 2021 [[paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Jing_Towards_Novel_Target_Discovery_Through_Open-Set_Domain_Adaptation_ICCV_2021_paper.pdf)][[Github](https://github.com/scottjingtt/SROSDA/tree/main)].
 
 ## Data
 ---
@@ -21,11 +23,13 @@ Implementation for the ''Interpretable SR-OSDA'' work, which is submitted to IEE
 
 - Open-set Domain Adaptation Task
 
-> $OS^*$: 
+> $OS^*$: class-wise average accuracy on the seen categories.
 >
-> $OS^\diamond$: 
+> $OS^\diamond$: class-wise average accuracy on the unseen categories correctly classified as "unknown".
 >
-> $OS$: 
+> $OS$: $\frac{OS^* \times C_{shr} + OS^\diamond}{C_{shr} + 1}$
+
+> $OS^{H}$: $\frac{ 2 \times OS^* \times OS^\diamond}{OS^* + OS^\diamond}$
 
 - Semantic-Recovery Open-Set Domain Adaptation Task
 
